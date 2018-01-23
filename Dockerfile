@@ -1,5 +1,5 @@
 FROM ubuntu:14.04
-RUN apt-get install -y python
+RUN apt-get update && apt-get install -y python2.7
 ADD . /src
 WORKDIR /src
-CMD ["python", "sleep.py", "10"]
+CMD ["python2.7", "sleep.py", "10"]
